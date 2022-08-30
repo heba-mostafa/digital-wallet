@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Account } from '../shared/account.module';
+import { AccountService } from '../shared/account.service';
 @Component({
   selector: 'app-account-total',
   templateUrl: './account-total.component.html',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountTotalComponent implements OnInit {
 
-  constructor() { }
+  accounts: any;
+  constructor(private accountService: AccountService) {
+    this.accounts = this.accountService.getSum();
+  }
 
   ngOnInit(): void {
   }
