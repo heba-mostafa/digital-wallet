@@ -11,7 +11,7 @@ export class AccountListComponent implements OnInit {
 
   accounts:Account[];
   constructor(private accountService:AccountService) { 
-    this.accounts = this.accountService.getAccounts();
+    this.accounts = this.accountService.getAccountsRounded();
   }
 
   ngOnInit(): void {

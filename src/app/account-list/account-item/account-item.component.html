@@ -1,6 +1,13 @@
 <a href="#"
    class="list-group-item list-group-item-action">
-    <span class="pull-left">
-        [{{account.logo}}]</span>
-    {{account.type}} | <span [ngClass]="{'text-danger': account.amount < 0}">{{account.amount}}</span> {{account.currency}}
+    <div class="d-flex justify-content-between">
+        <img [src]="account.logo"
+             alt="{{account.bank}}"
+             class="img-responsive"
+             style="max-height: 50px;">
+
+
+        <small>{{account.type}}</small>
+        <span [ngClass]="{'text-danger': account.amount < 0}"><b>{{formatNumber()}}</b> {{account.currency}}</span> 
+    </div>
 </a>

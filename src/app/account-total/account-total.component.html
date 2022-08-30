@@ -1,1 +1,8 @@
-<span [ngClass]="{'text-danger': accounts < 0}">{{accounts}}</span>
+
+
+<div class="d-flex  justify-content-center title"[ngClass]="{'text-danger': accounts < 0}">
+    <i class="bi bi-coin"></i> {{formatNumber()}} {{currency}}
+</div> 
+<div class="d-flex justify-content-center">
+   <small>Valuta {{resDate}}</small> 
+</div> 
