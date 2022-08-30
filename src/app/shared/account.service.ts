@@ -7,8 +7,8 @@ export class AccountService{
         new Account('Schaffhauser Kantonal bank', AccountType.PRIVATE, 6127.45,Currency.CHF),
         new Account('Credit Suisse', AccountType.SAVING, 4000.60,Currency.CHF),
         new Account('Raifeisen', AccountType.PRIVATE, -979.10,Currency.CHF),
-        new Account('Raifeisen', AccountType.PRIVATE, 3000.00,Currency.CHF)/*,
-        new Account('Raifeisen', AccountType.PRIVATE, -23266.80,Currency.CHF)*/
+        new Account('Raifeisen', AccountType.PRIVATE, 3000.00,Currency.CHF),
+        new Account('Raifeisen', AccountType.PRIVATE, -234266.24,Currency.CHF)
     ]
 
     getAccounts(){
@@ -22,6 +22,6 @@ export class AccountService{
         for(let i = 0; i < accountArr.length; i++){
            accountSum += accountArr[i].amount;
         }
-        return accountSum.toFixed(2);
+        return (Math.ceil(accountSum*20 - 0.5)/20).toFixed(2);
      }
 }
