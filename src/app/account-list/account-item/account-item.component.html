@@ -1,1 +1,6 @@
-<p>account-item works!</p>
+<a href="#"
+   class="list-group-item list-group-item-action">
+    <span class="pull-left">
+        [{{account.logo}}]</span>
+    {{account.type}} | <span [ngClass]="{'text-danger': account.amount < 0}">{{account.amount}}</span> {{account.currency}}
+</a>

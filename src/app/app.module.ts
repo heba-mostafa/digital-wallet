@@ -1,3 +1,4 @@
+import { AccountService } from './shared/account.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -24,7 +25,7 @@ import { TransactionItemComponent } from './transcations-list/transaction-item/t
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

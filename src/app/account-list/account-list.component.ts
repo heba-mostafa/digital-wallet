@@ -1,3 +1,5 @@
+import { AccountService } from './../shared/account.service';
+import { Account } from './../shared/account.module';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountListComponent implements OnInit {
 
-  constructor() { }
+  accounts:Account[];
+  constructor(private accountService:AccountService) { 
+    this.accounts = this.accountService.getAccounts();
+  }
 
   ngOnInit(): void {
   }

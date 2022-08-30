@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Account } from './../../shared/account.module';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-account-item',
-  templateUrl: './account-item.component.html',
-  styleUrls: ['./account-item.component.css']
+  templateUrl: './account-item.component.html'
+ // styleUrls: ['./account-item.component.css']
 })
 export class AccountItemComponent implements OnInit {
-
-  constructor() { }
+  @Input() account: Account;
+  @Input() index: number;
+  
 
   ngOnInit(): void {
   }
